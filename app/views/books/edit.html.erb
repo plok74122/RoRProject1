@@ -1,4 +1,4 @@
-<%= form_for @book, :url => book_path(@book) do |f| %>
+<%= form_for @book, :url => book_path(@book, :page => params[:page]) do |f| %>
     <%= f.label :name, "Name" %>
     <%= f.text_field :name %>
 
