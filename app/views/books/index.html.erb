@@ -1,0 +1,11 @@
+<ul>
+<% @books.each do |book| %>
+  <li>
+    <%= book.name %>
+    <%= link_to 'Show', book_path(book) %>
+    <%= link_to 'Edit', edit_book_path(book) %>
+    <%= link_to 'Delete', book_path(book), :method => :delete, :data => {:confirm => "你確定?"} %>
+  </li>
+<% end %>
+</ul>
+<%= link_to 'New Book', new_book_path %>
