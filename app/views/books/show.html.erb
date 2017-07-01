@@ -1,5 +1,7 @@
 <%= @book.name %>
 <%= simple_format(@book.description) %>
 <%= @book.isbn %>
+<%= @book.publish_date %>
+<%= @book.onBoard_datetime %>
 
 <p><%= link_to 'Back', books_path(:page => params[:page]) %></p>
