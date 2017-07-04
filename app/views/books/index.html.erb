@@ -10,14 +10,8 @@
 </table>
 <%= paginate @books %>
 <%= form_for Book.new , :url => books_path do |f| %>
-    <%= f.label :name, "Name" %>
-    <%= f.text_field :name %>
+    <%= render :partial => 'form', locals: { f: f, book: @book } %>
 
-    <%= f.label :description, "Description" %>
-    <%= f.text_area :description %>
-
-    <%= f.label :isbn, "ISBN" %>
-    <%= f.text_field :isbn %>
     </br>
     <%= f.label :publish_date, "出版日期" %>
     <%= f.date_select :publish_date %>
