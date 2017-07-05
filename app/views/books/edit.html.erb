@@ -1,5 +1,2 @@
-<%= form_for @book, :url => book_path(@book, :page => params[:page]) do |f| %>
-    <%= render :partial => 'form', locals: { f: f, book: @book } %>
+<%= render :partial => 'form' %>
 
-    <%= f.submit "Update" %>
-<% end %>

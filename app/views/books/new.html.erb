@@ -1,12 +1,2 @@
-<%= form_for @book, :url => books_path do |f| %>
-    <%= render :partial => 'form', locals: { f: f, book: @book } %>
+<%= render :partial => 'form' %>
 
-    </br>
-    <%= f.label :publish_date, "出版日期" %>
-    <%= f.date_select :publish_date %>
-    </br>
-    <%= f.label :onBoard_datetime, "上架日期" %>
-    <%= f.datetime_select :onBoard_datetime %>
-
-    <%= f.submit "Create" %>
-<% end %>
