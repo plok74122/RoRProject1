@@ -16,7 +16,8 @@ class BooksController < ApplicationController
       flash[:notice] = "成功新增 #{@book.name}"
       redirect_to books_path
     else
-      render :new
+      @books = Book.page(params[:page]).per(5)
+      render :index
     end
   end
 
